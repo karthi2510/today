@@ -9,7 +9,7 @@ pipeline {
 
     stage('final') {
       steps {
-        sh 'javac helloworld.java'
+        sh 'java helloworld.java'
       }
     }
 
