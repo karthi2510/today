@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('final') {
-      steps {
-        sh 'java helloworld.java'
+      parallel {
+        stage('final') {
+          steps {
+            sh 'java helloworld.java'
+          }
+        }
+
+        stage('') {
+          steps {
+            sh 'free h'
+          }
+        }
+
       }
     }
 
